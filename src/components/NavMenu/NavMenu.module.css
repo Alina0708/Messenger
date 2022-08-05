@@ -1,0 +1,10 @@
+.nav {
+  grid-area: navMenu;
+  background-color: #f9d1c9;
+  margin-top: 10px;
+  color: azure;
+}
+
+.activeLink{
+    color:blueviolet;
+}

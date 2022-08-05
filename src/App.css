@@ -1,38 +1,16 @@
-
-.app-wrapper{
-margin: 5px 5em;    
-display: grid;
-grid-template-rows: 100px 1fr;
-grid-template-columns: 2fr 10fr;
-grid-template-areas: 
-'header header'
-'navMenu content';
+.app-wrapper {
+  margin: 5px 5em;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-template-areas:
+    "header header"
+    "navMenu content";
 }
 
-.header{
-    grid-area: header;
-    background-color: #f9d1c9;
-}
-
-.logo{
-    height: 100px;
-    width: 110px;
-}
-
-.nav{
-    grid-area: navMenu;
-    background-color: #f9d1c9;
-    margin-top: 10px;
-}
-
-.content{
-    margin-top: 10px;
-    grid-area: content;
-    margin-left: 10px;
-    background-color: #f7f4cb;
-}
-
-.pageSky{
-    height: 320px;
-    width: 800px;
+ .content {  /*содержимое страницы */
+  margin-top: 10px;
+  grid-area: content;
+  margin-left: 10px;
+  background-color: #f7f4cb;
 }
