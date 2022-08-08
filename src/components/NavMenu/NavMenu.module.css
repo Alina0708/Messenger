@@ -2,9 +2,18 @@
   grid-area: navMenu;
   background-color: #f9d1c9;
   margin-top: 10px;
-  color: azure;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.activeLink{
-    color:blueviolet;
+.item {
+  color: azure;
+  text-decoration: none;
+  margin-left: 80px;
+}
+
+.activeLink {
+  color: blueviolet;
+  text-decoration: none;
+  margin-left: 80px;
 }

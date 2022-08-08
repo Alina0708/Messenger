@@ -1,0 +1,21 @@
+.dialogs {
+  color: blueviolet;
+  font: weight 5px;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-areas: "interlocutors message";
+}
+
+.interlocutors {
+  grid-area: interlocutors;
+  padding: 10px;
+}
+
+.interlocutors .active {
+  color: brown;
+}
+
+.message {
+  grid-area: message;
+  padding: 10px;
+}
