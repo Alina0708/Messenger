@@ -4,16 +4,19 @@
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+
 }
 
 .item {
   color: azure;
   text-decoration: none;
-  margin-left: 80px;
+  margin-left: 70px;
+  font-size: 25px;
 }
 
 .activeLink {
   color: blueviolet;
   text-decoration: none;
-  margin-left: 80px;
+  margin-left: 70px;
+  font-size: 25px;
 }

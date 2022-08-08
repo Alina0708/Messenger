@@ -1,11 +1,25 @@
 .profilePosts {
   color: blueviolet;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .profilePosts img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 100px;
   border-color: blueviolet;
   box-shadow: 0 0 7px blueviolet;
+}
+
+.postMessage {
+  margin-left: 10px;
+}
+
+.like {
+  color: blueviolet;
+  text-align: right;
+  margin-right: 150px;
+
 }

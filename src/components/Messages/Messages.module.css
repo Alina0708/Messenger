@@ -11,10 +11,6 @@
   padding: 10px;
 }
 
-.interlocutors .active {
-  color: brown;
-}
-
 .message {
   grid-area: message;
   padding: 10px;
