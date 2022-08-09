@@ -6,7 +6,7 @@ import MessageInDialog from "./MessageInDialog/MessageInDialog";
 const Messages = (props) => {
 
   let dialogsElement = props.dialogsData.map((dialog) => (
-    <DialogItem avtorLink={dialog.avtorLink} avtor={dialog.avtor} />
+    <DialogItem avtorLink={dialog.avtorLink} imageAvatar={dialog.imageAvatar} avtor={dialog.avtor}/>
   ));
 
   let messagesElemet = props.messagesData.map((message) => (

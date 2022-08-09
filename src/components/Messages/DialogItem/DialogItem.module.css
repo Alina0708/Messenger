@@ -5,3 +5,17 @@
 .interlocutor {
   text-decoration: none;
 }
+
+.nameAvatar{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.nameAvatar img{
+  height: 60px;
+  width:60px;
+  border-radius: 100px;
+  border: 2px blueviolet solid;
+  margin-right: 10px;
+}
