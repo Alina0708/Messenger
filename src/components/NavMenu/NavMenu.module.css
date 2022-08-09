@@ -2,21 +2,32 @@
   grid-area: navMenu;
   background-color: #f9d1c9;
   margin-top: 10px;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
-
 }
 
 .item {
   color: azure;
   text-decoration: none;
-  margin-left: 70px;
-  font-size: 25px;
+  margin-left: 50px;
+  font-size: 28px;
+}
+
+.item img {
+  padding-right: 10px;
+  height: 25px;
+  width: 25px;
 }
 
 .activeLink {
   color: blueviolet;
   text-decoration: none;
-  margin-left: 70px;
-  font-size: 25px;
+  margin-left: 50px;
+  font-size: 28px;
+}
+
+.activeLink img {
+  padding-right: 10px;
+  height: 25px;
+  width: 25px;
 }

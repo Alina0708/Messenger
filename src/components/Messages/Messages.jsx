@@ -3,24 +3,13 @@ import classes from "./Messages.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import MessageInDialog from "./MessageInDialog/MessageInDialog";
 
-const Messages = () => {
-  let dialogsData = [
-    { avtorLink: 1, avtor: "Alina" },
-    { avtorLink: 2, avtor: "Victoria" },
-    { avtorLink: 3, avtor: "Alexsander" },
-    { avtorLink: 4, avtor: "Dima" },
-    { avtorLink: 5, avtor: "Danik" },
-  ];
-  let dialogsElement = dialogsData.map((dialog) => (
+const Messages = (props) => {
+
+  let dialogsElement = props.dialogsData.map((dialog) => (
     <DialogItem avtorLink={dialog.avtorLink} avtor={dialog.avtor} />
   ));
-  let messagesData = [
-    { sms: "Hi" },
-    { sms: "How are you?" },
-    { sms: "Where are you" },
-  ];
 
-  let messagesElemet = messagesData.map((message) => (
+  let messagesElemet = props.messagesData.map((message) => (
     <MessageInDialog sms={message.sms} />
   ));
   return (

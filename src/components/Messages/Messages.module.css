@@ -9,6 +9,7 @@
 .interlocutors {
   grid-area: interlocutors;
   padding: 10px;
+  border-right: 2px blueviolet solid;
 }
 
 .message {
