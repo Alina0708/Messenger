@@ -1,3 +1,5 @@
+import {renderEntireTree} from "../render";
+
 let state = {
   myPostPage: {
     postsData: [
@@ -54,5 +56,15 @@ let state = {
     ],
   },
 };
+
+export let postInMyPost = (postMessage) =>{
+  let newPost = {
+    message: postMessage,
+    likecount: 20
+  }
+  state.myPostPage.postsData.push(newPost);
+ console.log(newPost);
+  renderEntireTree(state);
+}
 
 export default state;
