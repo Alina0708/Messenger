@@ -1,0 +1,7 @@
+.wallpaperCats{
+    background-image:url(../../image/backgraund1.jpg);
+    grid-area: cat;
+    opacity: 0.2;
+    margin-right: 5px;
+    margin-left: 5px;
+}

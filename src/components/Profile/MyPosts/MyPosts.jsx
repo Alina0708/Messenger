@@ -8,17 +8,23 @@ const MyPosts = (props) => {
   ));
 
   let newPostLink = React.createRef();
+
   let addNewPost = () => {
     let text = newPostLink.current.value;
     props.postInMyPost(text);
-    debugger;
   };
+
+  let onPostChange = () =>{
+  let text = newPostLink.current.value;
+  props.postInState(text);
+  }
+
   return (
     <div className={classes.postBlock}>
       <div>
-        <textarea ref={newPostLink}></textarea>
+        <textarea onChange={onPostChange} ref={newPostLink} value={props.newPostText} placeholder="write a post..."/>
       </div>
-      <button onClick={addNewPost}>Add post</button>
+      <button onClick={addNewPost} className={classes.buttonAddPost}>Add post</button>
       <div>{postElement}</div>
     </div>
   );

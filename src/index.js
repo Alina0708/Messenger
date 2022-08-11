@@ -1,6 +1,6 @@
 import reportWebVitals from "./reportWebVitals";
 import {renderEntireTree} from "./render";
-import state from "./redux/State"
+import state, { subscribe } from "./redux/State"
 
 
 renderEntireTree(state);

@@ -1,4 +1,4 @@
-import {renderEntireTree} from "../render";
+import { renderEntireTree } from "../render";
 
 let state = {
   myPostPage: {
@@ -13,6 +13,7 @@ let state = {
         likecount: "30",
       },
     ],
+    newPostText: 'post',
   },
   messagesPage: {
     dialogsData: [
@@ -57,13 +58,18 @@ let state = {
   },
 };
 
-export let postInMyPost = (postMessage) =>{
+export let postInMyPost = (postMessage) => {
   let newPost = {
-    message: postMessage,
-    likecount: 20
-  }
+    message: state.myPostPage.newPostText,
+    likecount: 22,
+  };
   state.myPostPage.postsData.push(newPost);
- console.log(newPost);
+  renderEntireTree(state);
+  state.myPostPage.newPostText = '';
+};
+
+export let postInState = (stringPost) =>{
+  state.myPostPage.newPostText = stringPost;
   renderEntireTree(state);
 }
 
