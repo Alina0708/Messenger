@@ -4,7 +4,7 @@ import Messages from "./components/Messages/Messages";
 import NavMenu from "./components/NavMenu/NavMenu";
 import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
-import Music from "./components/Music/Music"
+import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BackgroundColomns from "./components/BackgroundColomns/BackgroundColomns";
@@ -15,13 +15,37 @@ const App = (props) => {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <BackgroundColomns/>
+        <BackgroundColomns />
         <NavMenu />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Profile postsData={props.state.myPostPage.postsData}/>} />
-            <Route path="/Messages" element={<Messages dialogsData={props.state.messagesPage.dialogsData} messagesData={props.state.messagesPage.messagesData} />} />
-            <Route path="/Profile" element={<Profile postsData={props.state.myPostPage.postsData} newPostText={props.state.myPostPage.newPostText} postInState={props.postInState} postInMyPost={props.postInMyPost}/>} />
+            <Route
+              path="/"
+              element={
+                <Profile
+                  postsData={props.state.myPostPage.postsData}
+                  dispatch={props.dispatch}
+                />
+              }
+            />
+            <Route
+              path="/Messages"
+              element={
+                <Messages
+                  dialogsData={props.state.messagesPage.dialogsData}
+                  messagesData={props.state.messagesPage.messagesData}
+                />
+              }
+            />
+            <Route
+              path="/Profile"
+              element={
+                <Profile
+                  postsData={props.state.myPostPage.postsData}
+                  dispatch={props.dispatch}
+                />
+              }
+            />
             <Route path="/News" element={<News />} />
             <Route path="/Music" element={<Music />} />
             <Route path="/Settings" element={<Settings />} />
