@@ -1,6 +1,5 @@
 let store = {
-  _callSubscriber() {
-  },
+  _callSubscriber() {},
   _state: {
     myPostPage: {
       postsData: [
@@ -56,6 +55,7 @@ let store = {
         { sms: "How are you?" },
         { sms: "Where are you" },
       ],
+      newMessageText: "",
     },
   },
 
@@ -77,6 +77,16 @@ let store = {
     } else if (action.type === "POST-IN-STATE") {
       this._state.myPostPage.newPostText = action.stringPost;
       this._callSubscriber(this._state);
+    } else if (action.type === "new-Message") {
+      this._state.messagesPage.newMessageText = action.myMessage;
+      this._callSubscriber(this._state);
+    } else if (action.type === "send-Message") {
+      let newSendMessage = {
+        sms: this._state.messagesPage.newMessageText,
+      };
+      this._state.messagesPage.messagesData.push(newSendMessage);
+      this._callSubscriber(this._state);
+      this._state.messagesPage.newMessageText = "";
     }
   },
 };
