@@ -1,22 +1,24 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import { useDispatch } from "react-redux";
 
 const MyPosts = (props) => {
-  let postElement = props.postsData.map((post) => (
+  const dispatch = useDispatch()
+  const postElement = props.postsData.map((post) => (
     <Post message={post.message} likecount={post.likecount} />
   ));
 
-  let newPostLink = React.createRef();
+  const newPostLink = React.createRef();
 
-  let addNewPost = () => {
-    let text = newPostLink.current.value;
-    props.dispatch({ type: "POST-IN-MY-POST" });
+  const addNewPost = () => {
+    const text = newPostLink.current.value;
+    dispatch({ type: "POST-IN-MY-POST" });
   };
 
-  let onPostChange = () => {
-    let text = newPostLink.current.value;
-    props.dispatch({ type: "POST-IN-STATE", stringPost: text });
+  const onPostChange = () => {
+    const text = newPostLink.current.value;
+    dispatch({ type: "POST-IN-STATE", stringPost: text });
   };
 
   return (

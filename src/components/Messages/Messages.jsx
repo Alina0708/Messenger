@@ -2,30 +2,33 @@ import React from "react";
 import classes from "./Messages.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import MessageInDialog from "./MessageInDialog/MessageInDialog";
+import { useDispatch } from "react-redux";
 
 const Messages = (props) => {
-  let dialogsElement = props.dialogsData.map((dialog) => (
+  const dispatch = useDispatch();
+  const dialogsElement = props.dialogsData.map((dialog, index) => (
     <DialogItem
+      key={`dialog${index}`}
       avtorLink={dialog.avtorLink}
       imageAvatar={dialog.imageAvatar}
       avtor={dialog.avtor}
     />
   ));
 
-  let messagesElemet = props.messagesData.map((message) => (
-    <MessageInDialog sms={message.sms} />
+  const messagesElemet = props.messagesData.map((message, index) => (
+    <MessageInDialog key={`messageInDialog${index}`} sms={message.sms} />
   ));
 
-  let newMessageText = props.newMessageText;
-  let newMessageElement = React.createRef();
+  const newMessageText = props.newMessageText;
+  const newMessageElement = React.createRef();
 
-  let onSendMessageClick = () => {
-    props.dispatch({ type: "send-Message" });
+  const onSendMessageClick = () => {
+    dispatch({ type: "send-Message" });
   };
 
-  let onChangeMessage = (event) => {
-    let text = event.target.value;
-    props.dispatch({ type: "new-Message", myMessage: text });
+  const onChangeMessage = (event) => {
+    const text = event.target.value;
+    dispatch({ type: "new-Message", myMessage: text });
   };
 
   return (

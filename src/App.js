@@ -8,9 +8,9 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BackgroundColomns from "./components/BackgroundColomns/BackgroundColomns";
+import { connect } from "react-redux";
 
 const App = (props) => {
-
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -19,23 +19,14 @@ const App = (props) => {
         <NavMenu />
         <div className="content">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Profile
-                  postsData={props.state.myPostPage.postsData}
-                  dispatch={props.dispatch}
-                />
-              }
-            />
+            <Route path="/" element={<Profile postsData={props.postsData} />} />
             <Route
               path="/Messages"
               element={
                 <Messages
-                  dialogsData={props.state.messagesPage.dialogsData}
-                  messagesData={props.state.messagesPage.messagesData}
-                  newMessageText={props.state.newMessageText}
-                  dispatch={props.dispatch}
+                  dialogsData={props.dialogsData}
+                  messagesData={props.messagesData}
+                  newMessageText={props.newMessageText}
                 />
               }
             />
@@ -43,7 +34,7 @@ const App = (props) => {
               path="/Profile"
               element={
                 <Profile
-                  postsData={props.state.myPostPage.postsData}
+                  postsData={props.postsData}
                   dispatch={props.dispatch}
                 />
               }
@@ -59,4 +50,14 @@ const App = (props) => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  const { postsData } = state.posts;
+  const { messagesData, dialogsData, newMessageText } = state.messages;
+  return {
+    postsData,
+    messagesData,
+    dialogsData,
+    newMessageText,
+  };
+};
+export default connect(mapStateToProps)(App);
