@@ -1,0 +1,57 @@
+
+article {
+  display: grid;
+  grid-template-areas:
+    "h2 h2"
+    "img p"
+    ". like";
+}
+h2 {
+  grid-area: h2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section img {
+  grid-area: img;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  height: 150px;
+  width: 280px;
+}
+
+p {
+  text-indent: 30px;
+  grid-area: p;
+  margin-left: 10px;
+  margin-right: 20px;
+  text-align: justify;
+  
+}
+
+.like {
+  grid-area: like;
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  margin-right: 30px;
+}
+.like::after {
+  content: "\2665";
+  margin-left: 5px;
+}
+
+.buttonAdd {
+    margin-top: 10px;
+  margin-left: 900px;
+  background: blueviolet;
+  color: azure;
+  border-color: blueviolet;
+  border-radius: 10px;
+  width: 120px;
+  height: 30px;
+}
+
+textarea{
+    
+}

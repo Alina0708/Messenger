@@ -1,0 +1,28 @@
+.wrapperModel {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.contentModel {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  height: 300px;
+  width: 500px;
+}
+
+.closeModel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.closeModel::after {
+  content: "\2716";
+}

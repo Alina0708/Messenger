@@ -19,14 +19,14 @@
 
 .buttonAddMessage {
   background: blueviolet;
-  width: 70px;
-  height: 20px;
+  width: 120px;
+  height: 30px;
   color: azure;
   border-color: blueviolet;
   border-radius: 10px;
 }
 
-.textareaMessage{
+.textareaMessage {
   margin-top: 10px;
   margin-bottom: 5px;
   max-width: 900px;

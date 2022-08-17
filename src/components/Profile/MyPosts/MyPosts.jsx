@@ -4,7 +4,7 @@ import Post from "./Post/Post";
 import { useDispatch } from "react-redux";
 
 const MyPosts = (props) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const postElement = props.postsData.map((post) => (
     <Post message={post.message} likecount={post.likecount} />
   ));

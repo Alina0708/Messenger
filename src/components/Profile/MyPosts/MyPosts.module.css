@@ -1,9 +1,11 @@
-.postBlock{
+.postBlock {
   padding-left: 10px;
 }
-.buttonAddPost{
+.buttonAddPost {
   background: blueviolet;
   color: azure;
   border-color: blueviolet;
   border-radius: 10px;
+  width: 120px;
+  height: 30px;
 }
