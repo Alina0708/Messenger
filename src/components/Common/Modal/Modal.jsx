@@ -2,7 +2,6 @@ import classes from "./Modal.module.css";
 import React from "react";
 
 const Modal = ({ setActive, children }) => {
-  console.log("modal");
   return (
     <div className={classes.wrapperModel} onClick={() => setActive(false)}>
       <div

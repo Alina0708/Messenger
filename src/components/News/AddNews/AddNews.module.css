@@ -1,27 +1,38 @@
-section{
-    white-space: pre-wrap
-}
-h3{
-    display: flex;
-    justify-content: center;
-}
-
-.buttonSubmit{
-    margin-top: 10px;
-    background: blueviolet;
-    color: azure;
-    border-color: blueviolet;
-    border-radius: 10px;
-    height: 35px;
-    width: 80px;
+.news {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100px;
+  max-height: 100px;
 }
 
-.buttonCancel{
-    margin-top: 10px;
-    background: rgb(226, 43, 43);
-    color: azure;
-    border-color: rgb(226, 43, 43);
-    border-radius: 10px;
-    height: 35px;
-    width: 80px;
+h2 {
+  display: flex;
+  justify-content: center;
+}
+.imageUrl {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+.buttonSubmit {
+  margin-top: 10px;
+  margin-left: 7px;
+  background: blueviolet;
+  color: azure;
+  border-color: blueviolet;
+  border-radius: 10px;
+  height: 45px;
+  width: 100px;
+}
+
+.buttonCancel {
+  margin-left: 65%;
+  margin-top: 10px;
+  background: rgb(226, 43, 43);
+  color: azure;
+  border-color: rgb(226, 43, 43);
+  border-radius: 10px;
+  height: 45px;
+  width: 100px;
 }

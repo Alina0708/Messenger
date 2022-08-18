@@ -4,8 +4,7 @@ import classes from "./News.module.css";
 import { useState } from "react";
 import AddNews from "./AddNews/AddNews";
 
-const News = () => {
-  const news = [
+ const newsInfo = [
     {
       title: "Bengal cat",
       contentNews:
@@ -22,20 +21,23 @@ const News = () => {
         "https://cdn.lifehacker.ru/wp-content/uploads/2019/10/Depositphotos_109617914_xl-2015_1572586507-e1572586577434-630x315.jpg",
       likeCount: "45",
     },
+    
   ];
 
-  const [modelActive, setModelActive] = useState(false);
+const News = () => {
 
+  const [news, setnewsInfo] = useState(newsInfo);
+  const [modelActive, setModelActive] = useState(false);
+ 
   return (
     <div>
       <section>
-        {news.length > 0 &&
-          news.map((newsItem, index) => (
+        { newsInfo.map((newsItem, index) => (
             <article key={index}>
               <h2>{newsItem.title}</h2>
               <img src={newsItem.image} />
               <p>{newsItem.contentNews}</p>
-              <div className={classes.like}>{newsItem.likeCount}</div>
+              <div className={classes.like}>{newsItem.likeCount} </div>
             </article>
           ))}
       </section>
@@ -47,7 +49,7 @@ const News = () => {
       </button>
       {modelActive && (
         <Modal setActive={setModelActive}>
-          <AddNews/>
+          <AddNews setnewsInfo={setnewsInfo} newsInfo={newsInfo} setActive={setModelActive}/>
         </Modal>
       )}
     </div>
