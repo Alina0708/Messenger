@@ -1,25 +1,44 @@
 .news {
   display: block;
-  max-width: 100%;
-  min-width: 100%;
+  max-width: 96.6%;
+  min-width: 96.6%;
   min-height: 100px;
   max-height: 100px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 0.2px #666 solid;
+  outline: none;
+  padding: 10px;
 }
-
+.news:focus {
+  border: 0.8px blueviolet solid;
+}
 h2 {
   display: flex;
   justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
-.imageUrl {
+h3 {
   margin-bottom: 10px;
+}
+.titleNews {
   display: block;
-  width: 100%;
+  width: 98%;
+  height: 30px;
+  border-radius: 5px;
+  border: 0.2px #666 solid;
+  outline: none;
+  padding-left: 10px;
+}
+.titleNews:focus {
+  border: 0.8px blueviolet solid;
 }
 .buttonSubmit {
-  margin-top: 10px;
-  margin-left: 7px;
-  background: blueviolet;
-  color: azure;
+  margin-top: 25px;
+  background: white;
+  color: blueviolet;
+  font-weight: 900;
   border-color: blueviolet;
   border-radius: 10px;
   height: 45px;
@@ -27,12 +46,60 @@ h2 {
 }
 
 .buttonCancel {
-  margin-left: 65%;
-  margin-top: 10px;
-  background: rgb(226, 43, 43);
-  color: azure;
-  border-color: rgb(226, 43, 43);
+  margin-left: 66.67%;
+  margin-top: 25px;
+  background: blueviolet;
+  color: white;
+  font-weight: 900;
+  border-color: blueviolet;
   border-radius: 10px;
   height: 45px;
   width: 100px;
+}
+
+.icon__wrapper {
+  margin-left: 0.5rem;
+  display: flex;
+}
+.icon_button {
+  cursor: pointer;
+}
+.icon_button::before {
+  /* content: "\2297"; */
+  content: "\f06a";
+  font-size: 1.4rem;
+  transform: scale(0.2);
+  color: #666;
+}
+
+.icon__wrapper:hover .icon_button::before {
+  color: #ae0000;
+}
+
+.titleModal {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.star::after {
+  content: "*";
+  color: blueviolet;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+.messageError {
+  display: flex;
+  color: red;
+  margin-left: 10px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.buttonInsertImage {
+  /* visibility: hidden; */
+/* background-image: url('https://cdn-icons-png.flaticon.com/512/3342/3342137.png'); */
 }

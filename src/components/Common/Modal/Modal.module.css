@@ -11,16 +11,17 @@
   transition: 0.5s;
 }
 .contentModel {
-  padding: 20px;
+  padding: 35px;
   border-radius: 12px;
+  border: 2px blueviolet solid;
   background-color: white;
-  height: 400px;
+  height: 450px;
   width: 600px;
 }
 
 .closeModel {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: end;
 }
 .closeModel::after {
