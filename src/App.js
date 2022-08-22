@@ -5,6 +5,7 @@ import NavMenu from "./components/NavMenu/NavMenu";
 import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
+import Films from "./components/Films/Films";
 import Settings from "./components/Settings/Settings";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BackgroundColomns from "./components/BackgroundColomns/BackgroundColomns";
@@ -41,6 +42,7 @@ const App = (props) => {
             />
             <Route path="/News" element={<News />} />
             <Route path="/Music" element={<Music />} />
+            <Route path="/Films" element={<Films/>}/>
             <Route path="/Settings" element={<Settings />} />
           </Routes>
         </div>

@@ -9,3 +9,14 @@
   width: 120px;
   height: 30px;
 }
+
+.textPost {
+  border-radius: 5px;
+  border: 0.2px #666 solid;
+  outline: none;
+  padding: 10px;
+}
+
+.textPost:focus {
+  border: 0.8px blueviolet solid;
+}

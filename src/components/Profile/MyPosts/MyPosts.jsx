@@ -25,10 +25,11 @@ const MyPosts = (props) => {
     <div className={classes.postBlock}>
       <div>
         <textarea
+        className={classes.textPost}
           onChange={onPostChange}
           ref={newPostLink}
           value={props.newPostText}
-          placeholder="write a post..."
+          placeholder="Write a post..."
         />
       </div>
       <button onClick={addNewPost} className={classes.buttonAddPost}>

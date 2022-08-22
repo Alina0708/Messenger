@@ -4,7 +4,7 @@
   min-width: 96.6%;
   min-height: 100px;
   max-height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 5px;
   border: 0.2px #666 solid;
   outline: none;
@@ -35,7 +35,7 @@ h3 {
   border: 0.8px blueviolet solid;
 }
 .buttonSubmit {
-  margin-top: 25px;
+  margin-top: 10px;
   background: white;
   color: blueviolet;
   font-weight: 900;
@@ -47,7 +47,7 @@ h3 {
 
 .buttonCancel {
   margin-left: 66.67%;
-  margin-top: 25px;
+  margin-top: 10px;
   background: blueviolet;
   color: white;
   font-weight: 900;
@@ -100,6 +100,16 @@ h3 {
 }
 
 .buttonInsertImage {
-  /* visibility: hidden; */
-/* background-image: url('https://cdn-icons-png.flaticon.com/512/3342/3342137.png'); */
+display: none;
+  /* background-image: url('https://cdn-icons-png.flaticon.com/512/3342/3342137.png'); */
+}
+
+.loadImage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.loadImage img{
+margin-right: 10px;
 }

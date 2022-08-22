@@ -1,8 +1,7 @@
 import React from "react";
 import classes from "./AddNews.module.css";
-import * as yup from "yup";
+// import * as yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import ReactTooltip from "react-tooltip";
 import { useState } from "react";
 
 const AddNews = ({ setnewsInfo, newsInfo, setActive }) => {
@@ -27,6 +26,11 @@ const AddNews = ({ setnewsInfo, newsInfo, setActive }) => {
   const onImageChange = (e) => {
     const [file] = e.target.files;
     setImg(URL.createObjectURL(file));
+  };
+
+  const hiddenFileInput = React.useRef(null);
+  const handleClick = (event) => {
+    hiddenFileInput.current.click();
   };
 
   return (
@@ -96,12 +100,20 @@ const AddNews = ({ setnewsInfo, newsInfo, setActive }) => {
               placeholder="Write news..."
             />
 
-            <div>
+            <div className={classes.loadImage}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3342/3342137.png"
+                width={"40px"}
+                onClick={handleClick}
+              />
+              <h4>Load image</h4>
               <input
-                // className={classes.buttonInsertImage}
+                className={classes.buttonInsertImage}
                 type="file"
                 id="urlImage"
                 title="image"
+                ref={hiddenFileInput}
+                // onChange={handleChange}
                 onChange={onImageChange}
               />
             </div>

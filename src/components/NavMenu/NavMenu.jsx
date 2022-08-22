@@ -51,6 +51,17 @@ const NavMenu = () => {
       </div>
       <div>
         <NavLink
+          to="Films"
+          className={(navData) =>
+            navData.isActive ? classes.activeLink : classes.item
+          }
+        >
+          <img src="https://cdn-icons-png.flaticon.com/512/2460/2460029.png" />
+          Films
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
           to="Settings"
           className={(navData) =>
             navData.isActive ? classes.activeLink : classes.item
