@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import { addPost } from "../../../redux/actions/postsActions";
 import { useDispatch } from "react-redux";
 
 const MyPosts = (props) => {
@@ -13,7 +14,7 @@ const MyPosts = (props) => {
 
   const addNewPost = () => {
     const text = newPostLink.current.value;
-    dispatch({ type: "POST-IN-MY-POST" });
+    dispatch(addPost({ type: "POST-IN-MY-POST", text: text }));
   };
 
   const onPostChange = () => {
@@ -25,7 +26,7 @@ const MyPosts = (props) => {
     <div className={classes.postBlock}>
       <div>
         <textarea
-        className={classes.textPost}
+          className={classes.textPost}
           onChange={onPostChange}
           ref={newPostLink}
           value={props.newPostText}

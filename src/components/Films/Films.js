@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import classes from "./Films.module.css";
+import { useDispatch, useSelector } from "react-redux/es/exports";
 import axios from "axios";
 
 import { getFilms } from "../API/films";
 
 const Films = () => {
-  const [films, setFilms] = useState();
-  console.log("films", films);
+  const dispatch = useDispatch();
 
-  //   console.log("!", films.results[1].producer);
+  const filmaFromStore = useSelector((state) => state);
+  console.log("store filma", filmaFromStore);
+  const [films, setFilms] = useState();
+
   useEffect(() => {
-    getFilms()
+    dispatch(getFilms())
       .then((response) => setFilms(response))
       .catch((error) => console.error(error));
   }, []);

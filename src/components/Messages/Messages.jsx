@@ -2,10 +2,11 @@ import React from "react";
 import classes from "./Messages.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import MessageInDialog from "./MessageInDialog/MessageInDialog";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Messages = (props) => {
   const dispatch = useDispatch();
+  
   const dialogsElement = props.dialogsData.map((dialog, index) => (
     <DialogItem
       key={`dialog${index}`}

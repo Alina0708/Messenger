@@ -13,6 +13,7 @@ import { connect } from "react-redux";
 
 const App = (props) => {
   return (
+    
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
