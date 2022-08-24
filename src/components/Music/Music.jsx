@@ -1,6 +1,5 @@
 import classes from "./Music.module.css";
-import ReactAudioPlayer from "react-audio-player";
-
+// import ReactAudioPlayer from "react-audio-player";
 
 const Music = () => {
   return (
@@ -11,16 +10,16 @@ const Music = () => {
         controls
       /> */}
 
-{/* <ReactVideo
+      {/* <ReactVideo
             src='https://www.example.com/myvideo.mp4'
             poster='/poster.png'
             primaryColor="red"
             autoPlay
         /> */}
-         <ReactAudioPlayer
+      {/* <ReactAudioPlayer
               src="/your_audio_file.mp4"
               poster="/your_poster_file.png"
-          />
+          /> */}
     </div>
   );
 };
