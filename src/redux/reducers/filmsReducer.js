@@ -3,12 +3,11 @@ const initialState = {
 };
 
 const filmsReducer = (state = initialState, action) => {
-  console.log("resuxer", state, action.type, action.payload);
   switch (action.type) {
     case "GET_FILMS":
       console.log("case");
       return {
-        ...state,
+        // ...state,
         films: action.payload.films,
       };
     default:

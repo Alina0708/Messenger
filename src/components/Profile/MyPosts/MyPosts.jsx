@@ -6,8 +6,8 @@ import { useDispatch } from "react-redux";
 
 const MyPosts = (props) => {
   const dispatch = useDispatch();
-  const postElement = props.postsData.map((post) => (
-    <Post message={post.message} likecount={post.likecount} />
+  const postElement = props.postsData.map((post, index) => (  
+    <Post   key={`post${index}`} message={post.message} likecount={post.likecount} />
   ));
 
   const newPostLink = React.createRef();

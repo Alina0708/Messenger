@@ -1,25 +1,45 @@
+// import mp3 from "../../music/test1.mp3";
+import React, { useRef } from "react";
+
+import play from "../../image/play.png";
+import pause from "../../image/pause.png";
 import classes from "./Music.module.css";
-// import ReactAudioPlayer from "react-audio-player";
 
 const Music = () => {
+  //*/ const dispatch = useDispatch();
+
+  const hiddenFileInput1 = React.useRef(null);
+  const hiddenFileInput2 = React.useRef(null);
+  const handleClick1 = (event) => {
+    hiddenFileInput1.current.click();
+  };
+  const handleClick2 = (event) => {
+    hiddenFileInput2.current.click();
+  };
+
+  const playSound = () => {
+    alert("hello");
+  };
+
+  const pauseSound = () => {
+    alert("pause");
+  };
   return (
     <div>
-      {/* <ReactAudioPlayer
-        src="url../../music/ostap-parfenov_-_ty-ne-koroleva-swerodo-remix.mp3"
-        autoPlay
-        controls
-      /> */}
-
-      {/* <ReactVideo
-            src='https://www.example.com/myvideo.mp4'
-            poster='/poster.png'
-            primaryColor="red"
-            autoPlay
-        /> */}
-      {/* <ReactAudioPlayer
-              src="/your_audio_file.mp4"
-              poster="/your_poster_file.png"
-          /> */}
+      <div>
+        <button
+          className={classes.play}
+          ref={hiddenFileInput1}
+          onClick={playSound}
+        />
+        <button
+          className={classes.pause}
+          ref={hiddenFileInput2}
+          onClick={pauseSound}
+        />
+        <img src={pause} alt="pause" onClick={handleClick2} />
+        <img src={play} alt="play" onClick={handleClick1} />
+      </div>
     </div>
   );
 };

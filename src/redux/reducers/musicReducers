@@ -1,0 +1,22 @@
+//always use null as an indicator of empty.
+const initialState = {
+  audioTrack: null,
+  isPlaying: false,
+};
+
+export const musicPlayer = (state = initialState, action) => {
+  switch (action.type) {
+    case "SET_ACTIVE_TRACK":
+      return {
+        ...state,
+        audioTrack: action.payload,
+      };
+    case "PLAY_TRACK":
+      return {
+        ...state,
+        isPlaying: action.payload,
+      };
+    default:
+      return state;
+  }
+};
