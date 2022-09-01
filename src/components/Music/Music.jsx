@@ -39,6 +39,13 @@ const Music = () => {
         />
         <img src={pause} alt="pause" onClick={handleClick2} />
         <img src={play} alt="play" onClick={handleClick1} />
+        <audio controls>
+          <source src="../../music/test1.mp3" type="audio/mp3" />
+          <p>
+            Ваш браузер не поддерживает HTML5 аудио. Вот взамен
+            <a href="">ссылка на аудио</a>
+          </p>
+        </audio>
       </div>
     </div>
   );
