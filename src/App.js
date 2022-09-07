@@ -11,7 +11,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BackgroundColomns from "./components/BackgroundColomns/BackgroundColomns";
 import { connect } from "react-redux";
 
-// test revert and reset
 const App = (props) => {
   return (
     
