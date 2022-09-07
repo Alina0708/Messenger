@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BackgroundColomns from "./components/BackgroundColomns/BackgroundColomns";
 import { connect } from "react-redux";
 
+//hello 
 const App = (props) => {
   return (
     
