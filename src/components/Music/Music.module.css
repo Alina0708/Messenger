@@ -1,0 +1,12 @@
+.play {
+  display: none;
+}
+
+.pause {
+  display: none;
+}
+
+img{
+  /* font-weight: 50px; */
+  height: 40px;
+}

@@ -1,29 +1,21 @@
-import { useEffect, useState } from "react";
-import classes from "./Films.module.css";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux/es/exports";
-import axios from "axios";
 
 import { getFilms } from "../API/films";
 
 const Films = () => {
   const dispatch = useDispatch();
-
-  const filmaFromStore = useSelector((state) => state);
-  console.log("store filma", filmaFromStore);
-  const [films, setFilms] = useState();
-
+  const filmsFromStore = useSelector((state) => state.films.films.results);
   useEffect(() => {
-    dispatch(getFilms())
-      .then((response) => setFilms(response))
-      .catch((error) => console.error(error));
-  }, []);
+    dispatch(getFilms());
+  });
 
   return (
     <div>
-      {films && (
+      {filmsFromStore && (
         <>
-          {films.results.map((film) => (
-            <div>
+          {filmsFromStore.map((film, index) => (
+            <div key={`film${index}`}>
               <h3>{film.title}</h3>
               <p>Producer:{film.producer}</p>
               <p>{film.opening_crawl}</p>

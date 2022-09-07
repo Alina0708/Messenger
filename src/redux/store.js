@@ -10,12 +10,14 @@ import messages from "./reducers/messagesReducer";
 import posts from "./reducers/postsReducer";
 import sidebar from "./reducers/sidebarReducer";
 import films from "./reducers/filmsReducer";
+import music from "./reducers/musicReducers";
 
 let reducers = combineReducers({
   messages,
   posts,
   sidebar,
   films,
+  music
 });
 
 const composeEnhancers =

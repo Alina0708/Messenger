@@ -1,4 +1,4 @@
-import Rect from "react"
+import React from "react"
 import classes from "./BackgroundColomns.module.css"
 
 let BackgroundColomns = () =>{

@@ -2,10 +2,8 @@ import React from "react";
 import classes from "./DialogItem.module.css";
 import { NavLink } from "react-router-dom";
 
-const DialogItem = (props) => {
-
-  let path = "/Messages/" + props.avtorLink;
-
+const DialogItem = ({ avtorLink, imageAvatar, avtor }) => {
+  let path = "/Messages/" + avtorLink;
   return (
     <div>
       <NavLink
@@ -15,8 +13,8 @@ const DialogItem = (props) => {
         }
       >
         <div className={classes.nameAvatar}>
-           <img src={props.imageAvatar}/>
-          {props.avtor}
+          <img alt={imageAvatar} src={imageAvatar} />
+          {avtor}
         </div>
       </NavLink>
     </div>
